@@ -1,10 +1,11 @@
 package fake.creditcard.generator;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import fake.creditcard.validator.Luhn;
 
 public class LuhnTest {
 
@@ -38,12 +39,6 @@ public class LuhnTest {
 		assertTrue(luhn.isValid(VOYAGER));
 		assertTrue(luhn.isValid(HIPER));
 		assertTrue(luhn.isValid(AURA));
-	}
-
-	@Test
-	void shouldReturnVisa() {
-		String generate = luhn.generate();
-		assertTrue(luhn.isValid(generate));
 	}
 
 }
