@@ -15,11 +15,18 @@ class CreditCardGeneratorTest {
 	@BeforeEach
 	public void init() {
 		luhn = new Luhn();
-		generator = new CreditCardGenerator();
 	}
 
 	@Test
 	void shouldReturnVisa() {
+		generator = new VisaCardGenerator();
+		String generate = generator.generate();
+		assertTrue(luhn.isValid(generate));
+	}
+
+	@Test
+	void shouldReturnMaster() {
+		generator = new MasterCardGenerator();
 		String generate = generator.generate();
 		assertTrue(luhn.isValid(generate));
 	}
