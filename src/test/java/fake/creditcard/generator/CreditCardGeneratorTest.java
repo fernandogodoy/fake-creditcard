@@ -1,6 +1,6 @@
 package fake.creditcard.generator;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -10,7 +10,6 @@ import fake.creditcard.validator.Luhn;
 class CreditCardGeneratorTest {
 
 	private Luhn luhn;
-	private CreditCardGenerator generator;
 
 	@BeforeEach
 	public void init() {
@@ -19,15 +18,13 @@ class CreditCardGeneratorTest {
 
 	@Test
 	void shouldReturnVisa() {
-		generator = new VisaCardGenerator();
-		String generate = generator.generate();
+		String generate = new FakeCard(Brand.VISA).create();
 		assertTrue(luhn.isValid(generate));
 	}
 
 	@Test
 	void shouldReturnMaster() {
-		generator = new MasterCardGenerator();
-		String generate = generator.generate();
+		String generate = new FakeCard(Brand.MASTER).create();
 		assertTrue(luhn.isValid(generate));
 	}
 
