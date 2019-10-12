@@ -1,4 +1,4 @@
-package fake.creditcard.generator;
+package com.github.fakecreditcard.generator;
 
 public class FakeCard {
 

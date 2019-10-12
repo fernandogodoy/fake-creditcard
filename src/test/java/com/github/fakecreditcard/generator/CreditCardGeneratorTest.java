@@ -1,11 +1,13 @@
-package fake.creditcard.generator;
+package com.github.fakecreditcard.generator;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import fake.creditcard.validator.Luhn;
+import com.github.fakecreditcard.generator.Brand;
+import com.github.fakecreditcard.generator.FakeCard;
+import com.github.fakecreditcard.validator.Luhn;
 
 class CreditCardGeneratorTest {
 

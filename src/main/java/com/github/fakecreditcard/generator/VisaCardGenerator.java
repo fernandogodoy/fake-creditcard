@@ -1,6 +1,4 @@
-package fake.creditcard.generator;
-
-import java.util.concurrent.atomic.AtomicInteger;
+package com.github.fakecreditcard.generator;
 
 public class VisaCardGenerator extends AbstractCardGenerator {
 
@@ -20,11 +18,8 @@ public class VisaCardGenerator extends AbstractCardGenerator {
 	}
 
 	@Override
-	protected boolean applyLunhFactor(int index) {
+	protected boolean applyMultiplication(int index) {
 		return index % 2 == 1;
 	}
-
-	@Override
-	protected void preConfig(StringBuilder sb, AtomicInteger digitSum) {}
 
 }
