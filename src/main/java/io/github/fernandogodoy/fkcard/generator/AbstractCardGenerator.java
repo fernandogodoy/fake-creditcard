@@ -1,4 +1,4 @@
-package com.github.fakecreditcard.generator;
+package io.github.fernandogodoy.fkcard.generator;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;

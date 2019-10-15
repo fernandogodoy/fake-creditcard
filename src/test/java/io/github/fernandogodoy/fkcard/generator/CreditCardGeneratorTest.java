@@ -1,13 +1,13 @@
-package com.github.fakecreditcard.generator;
+package io.github.fernandogodoy.fkcard.generator;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.github.fakecreditcard.generator.Brand;
-import com.github.fakecreditcard.generator.FakeCard;
-import com.github.fakecreditcard.validator.Luhn;
+import io.github.fernandogodoy.fkcard.generator.Brand;
+import io.github.fernandogodoy.fkcard.generator.FakeCard;
+import io.github.fernandogodoy.fkcard.validator.Luhn;
 
 class CreditCardGeneratorTest {
 

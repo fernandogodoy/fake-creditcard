@@ -1,4 +1,4 @@
-package com.github.fakecreditcard.generator;
+package io.github.fernandogodoy.fkcard.generator;
 
 public enum Brand {
 

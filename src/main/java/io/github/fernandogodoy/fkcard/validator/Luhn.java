@@ -1,4 +1,4 @@
-package com.github.fakecreditcard.validator;
+package io.github.fernandogodoy.fkcard.validator;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;

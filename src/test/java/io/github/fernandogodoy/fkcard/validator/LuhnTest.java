@@ -1,11 +1,11 @@
-package com.github.fakecreditcard.validator;
+package io.github.fernandogodoy.fkcard.validator;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.github.fakecreditcard.validator.Luhn;
+import io.github.fernandogodoy.fkcard.validator.Luhn;
 
 public class LuhnTest {
 
