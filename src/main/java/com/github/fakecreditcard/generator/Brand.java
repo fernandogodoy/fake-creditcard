@@ -1,4 +1,4 @@
-package io.github.fernandogodoy.fkcard.generator;
+package com.github.fakecreditcard.generator;
 
 public enum Brand {
 
@@ -11,7 +11,7 @@ public enum Brand {
 		this.generator = creditCardGenerator;
 	}
 
-	CreditCardGenerator getGenerator() {
-		return generator;
+	public String generate() {
+		return this.generator.generate();
 	}
 }

@@ -1,4 +1,4 @@
-package io.github.fernandogodoy.fkcard.generator;
+package com.github.fakecreditcard.generator;
 
 public class VisaCardGenerator extends AbstractCardGenerator {
 

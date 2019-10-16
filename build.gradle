@@ -1,3 +1,16 @@
+buildscript{
+	ext{
+		lombokVersion = "1.18.8"
+		commonsLangVersion = "3.9"
+		junitVersion = "5.5.2"
+	}
+
+	repositories {
+		mavenLocal()
+		mavenCentral()
+	}
+}
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'java-library'
@@ -15,10 +28,13 @@ repositories {
 }
 
 dependencies {
-	compile 'org.apache.commons:commons-lang3:3.9'
+	compileOnly "org.projectlombok:lombok:${lombokVersion}"
+	annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
-	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
-	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.2'
+	compile "org.apache.commons:commons-lang3:${commonsLangVersion}"
+
+	testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+	testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
 }
 
 test {
@@ -26,22 +42,22 @@ test {
 }
 
 task sourcesJar(type: Jar) {
-    archiveClassifier = 'sources'
-    from sourceSets.main.allJava
+	archiveClassifier = 'sources'
+	from sourceSets.main.allJava
 }
 
 task javadocJar(type: Jar) {
-    archiveClassifier = 'javadoc'
-    from javadoc.destinationDir
+	archiveClassifier = 'javadoc'
+	from javadoc.destinationDir
 }
 
 publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
+	publications {
+		mavenJava(MavenPublication) {
+			from components.java
 
-            artifact sourcesJar
-            artifact javadocJar
-        }
-    }
+			artifact sourcesJar
+			artifact javadocJar
+		}
+	}
 }
