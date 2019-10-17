@@ -3,12 +3,15 @@ buildscript{
 		lombokVersion = "1.18.8"
 		commonsLangVersion = "3.9"
 		junitVersion = "5.5.2"
+		javaFakerVersion = "0.16"
+		junitPlatformVersion = "1.5.2"
 	}
 
 	repositories {
 		mavenLocal()
 		mavenCentral()
 	}
+	
 }
 
 apply plugin: 'java'
@@ -32,9 +35,13 @@ dependencies {
 	annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
 	compile "org.apache.commons:commons-lang3:${commonsLangVersion}"
+	compile("com.github.javafaker:javafaker:${javaFakerVersion}") 
 
-	testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
-	testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+	testCompile "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+	testRuntime "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+	testCompile "org.junit.platform:junit-platform-commons:${junitPlatformVersion}"
+	testCompile "org.junit.platform:junit-platform-launcher:${junitPlatformVersion}"
+	
 }
 
 test {

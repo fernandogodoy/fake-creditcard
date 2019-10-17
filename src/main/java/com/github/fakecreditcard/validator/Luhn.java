@@ -4,6 +4,11 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
+/**
+ * 
+ * @author Fernando
+ *
+ */
 public class Luhn {
 
 	public boolean isValid(String cardNumber) {

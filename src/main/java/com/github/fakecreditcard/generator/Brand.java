@@ -1,5 +1,10 @@
 package com.github.fakecreditcard.generator;
 
+/**
+ * 
+ * @author Fernando
+ *
+ */
 public enum Brand {
 
 	VISA(new VisaCardGenerator()),
