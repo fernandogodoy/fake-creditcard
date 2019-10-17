@@ -1,4 +1,4 @@
-package com.github.fakecreditcard;
+package com.github.fakecreditcard.data;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -14,5 +14,9 @@ public class Creditcard {
 	private String cvv;
 
 	private String expDate;
+	
+	private String expirationYear;
+	
+	private String expirationMonth;
 
 }
